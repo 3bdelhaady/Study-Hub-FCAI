@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Study-Hub-FCAI/static/css/main.039d63b1.css",
+    "main.js": "/Study-Hub-FCAI/static/js/main.51a3d28d.js",
+    "static/js/453.45df9cc5.chunk.js": "/Study-Hub-FCAI/static/js/453.45df9cc5.chunk.js",
+    "static/media/hero-section.png": "/Study-Hub-FCAI/static/media/hero-section.4daed8437b95cfca4d29.png",
+    "static/media/logo.png": "/Study-Hub-FCAI/static/media/logo.4bf21cfc5ad710215fef.png",
+    "index.html": "/Study-Hub-FCAI/index.html",
+    "main.039d63b1.css.map": "/Study-Hub-FCAI/static/css/main.039d63b1.css.map",
+    "main.51a3d28d.js.map": "/Study-Hub-FCAI/static/js/main.51a3d28d.js.map",
+    "453.45df9cc5.chunk.js.map": "/Study-Hub-FCAI/static/js/453.45df9cc5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.039d63b1.css",
+    "static/js/main.51a3d28d.js"
+  ]
+}
