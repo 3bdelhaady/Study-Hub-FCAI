@@ -1,38 +1,201 @@
-.App {
-  text-align: center;
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #000000;
+  color: #ffffff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1247px;
+  margin: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Navbar */
+.navbar {
+  background-color: transparent;
+  padding: 20px 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  width: 254px;
+  height: 139px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  border: 1px solid #75ADBA;
+  border-radius: 25px;
+  padding: 10px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a.active {
+  color: #75ADBA;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  color: #75ADBA;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content,
+.hero-image img,
+.hero-text {
+  position: relative;
+  z-index: 1;
+}
+
+.blur-circle {
+  position: absolute;
+  top: -100px;
+  left: 300px;
+  width: 1500px;
+  height: 1000px;
+  background: radial-gradient(circle, #75ADBA 0%, #000000 100%);
+  border-radius: 50%;
+  filter: blur(150px);
+  z-index: 0;
+  padding: 100px 0;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 100px 0;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.hero-text p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.icon {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px;
+  font-size: 20px;
+  margin-left: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.icon a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.icon a i {
+  color: #75ADBA;
+  border: 1px solid #75ADBA;
+  border-radius: 5px;
+  padding: 15px;
+  background: rgba(117, 173, 186, 0.1);
+  transition: all 0.3s ease;
 }
+
+.icon a:hover i {
+  background: rgba(117, 173, 186, 0.2);
+  transform: scale(1.05);
+}
+
+.icon span {
+  font-size: 14px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.btn-hero {
+  margin-top: 20px;
+}
+
+.btn-hero button {
+  border: 1px solid #75ADBA;
+  background: rgba(117, 173, 186, 0.1);
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(117, 173, 186, 0.3);
+  letter-spacing: 0.5px;
+}
+
+.btn-hero button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(117, 173, 186, 0.4);
+  
+}
+
+.btn-hero button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 10px rgba(117, 173, 186, 0.3);
+}
+
+.hero-image {
+  flex: 1;
+  text-align: center;
+  min-width: 300px;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  transform: scaleX(-1);
+  filter: drop-shadow(0 8px 32px rgba(117, 173, 186, 0.3));
+}
+
