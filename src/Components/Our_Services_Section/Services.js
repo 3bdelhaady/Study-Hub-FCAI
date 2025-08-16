@@ -10,7 +10,7 @@ export default function Services() {
         of their academic and professional journey
       </p>
 
-      <div className="services-grid">
+      <div className="services-grid" id={"#services"}>
         {servicesData.map((service, index) => (
           <ServiceCard
             key={index}

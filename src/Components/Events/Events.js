@@ -4,7 +4,7 @@ import EventCard from './EventCard';
 import eventsData from './eventsData';
 const Events = () => {
   return (
-    <section className="events-section">
+    <section className="events-section" id={"#events"}>
       <h2 className="events-title">Events</h2>
       <p className="events-subtitle">
         Join our vibrant community events, from academic workshops to fun social gatherings

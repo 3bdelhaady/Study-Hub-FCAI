@@ -1,21 +1,21 @@
 import FooterSocials from './FooterSocials';
-import FooterLinksColumn from './FooterLinksColumn';
+import FooterLinksColumn from './FooterLinkColumnsHome.jsx';
 // import logo from '../../imgs/logo.png';
 import { Link } from 'react-router-dom';
 
-const Footer = () => {
+const FooterHome = () => {
   const quickLinks = [
-    { label: 'Home', href: '/' },
-    { label: 'Workspace', href: '/' },
-    { label: 'About Us', href: '/' },
-    { label: 'Our Mission', href: '/' },
+    { label: 'Home', href: '#home' },
+    { label: 'Workspace', href: '#workspaces' },
+    { label: 'About Us', href: '#about' },
+    { label: 'Our Mission', href: '#mission' },
   ];
 
   const moreLinks = [
-    { label: 'Services', href: '/' },
-    { label: 'Events', href: '/' },
-    { label: 'Honor List', href: '/' },
-    { label: 'Contact Us', href: '/' },
+    { label: 'Services', href: '#services' },
+    { label: 'Events', href: '#events' },
+    { label: 'Honor List', href: '#honor' },
+    { label: 'Contact Us', href: '#contact' },
     { label: 'Data Policy', href: '/datapolicy' },
     
   ];
@@ -34,7 +34,6 @@ const Footer = () => {
           </p>
           <FooterSocials />
         </div>
-
         <FooterLinksColumn title="Quick Links" links={quickLinks} />
         <FooterLinksColumn title="More" links={moreLinks} />
         {/* <Link to={"/datapolicy"} className="footer-link">
@@ -51,4 +50,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default FooterHome;

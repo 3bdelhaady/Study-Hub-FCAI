@@ -1,7 +1,7 @@
 import React from 'react';
 export default  function MissionVision() {
   return (
-    <section className="mission-vision-section">
+    <section className="mission-vision-section" id="#mission">
       <h2 className="mission-vision-title">Our Mission &amp; Our Vision</h2>
       <div className="mission-vision-cards">
         <div className="mv-card mv-mission">

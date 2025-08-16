@@ -6,7 +6,7 @@ export default function Navbar() {
   return (
     <header className="navbar">
       <div className="container">
-        <Logo />
+        {/* <Logo /> */}
         <NavLinks />
       </div>
     </header>
