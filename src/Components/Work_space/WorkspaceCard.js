@@ -10,7 +10,7 @@ const WorkspaceCard = ({ year, link }) => {
       <div className="year-desc">
         Access your year-specific resources and workspace
       </div>
-      <a className="workspace-btn" href={link}>
+      <a className="workspace-btn" href={link} target="blank">
         Enter Workspace
       </a>
     </div>

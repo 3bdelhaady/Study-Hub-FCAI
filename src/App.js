@@ -1,34 +1,19 @@
-import React, { useEffect } from 'react';
-import Navbar from './Components/Header/Navbar';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import HeroSection from './Components/HeroSection/HeroSection';
-import WorkSpaces from './Components/Work_space/WorkSpaces';
-import scrollNavigation from './scrollNavigation';
-import MissionVision from './Components/Mision_Vision/MissionVision'
-import AboutUs from './Components/AboutUs/AboutUs';
-import Services from './Components/Our_Services_Section/Services';
-import Events from './Components/Events/Events';
-import Contact from './Components/Contact_Us/Contact';
-import Policy from './Components/Data_Policy/Policy';
-import Footer from './Components/Footer/Footer';
-function App() {
-  useEffect(() => {
-    scrollNavigation(); // <-- تشغيل السكربت بعد التحميل
-  }, []);
+import Home from './Home.js'
+import RegisterPage from './Components/Register/RegisterPage.js';
+import Policy from './Components/Data_Policy/Policy.js'
+// import Footer from './Components/Footer/Footer.js';
 
+function App() {
   return (
-    <>
-      <Navbar />
-      <HeroSection />
-      <WorkSpaces />
-      <MissionVision />
-      <AboutUs />
-      <Services/>
-      <Events/>
-      <Contact/>
-      <Policy/>
-      <Footer/>
-    </>
+    <Router>
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/datapolicy" element={<Policy />} />
+      </Routes>
+    </Router>
   );
 }
 

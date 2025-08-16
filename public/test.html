@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register - Study Hub Membership</title>
+    <link rel="icon" type="image/x-icon" href="./imgs/logo.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="./test.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header class="register-header">
+            <h1>Register to Join Study Hub</h1>
+            <p>
+                Complete this form to join Study Hub and activate your ID. You'll get
+                access to events, trips, academic resources, PS contests, gaming
+                competitions, exclusive discounts, and more. Your ID confirms your
+                membership and unlocks all Study Hub services.
+            </p>
+        </header>
+
+        <div class="register-card">
+            <form id="membershipForm">
+                <div class="form-section">
+                    <h2 class="section-title">Personal Information</h2>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="fullNameEn">Full Name *</label>
+                            <input type="text" id="fullNameEn" name="fullNameEn" class="form-control"
+                                placeholder="Enter your full name in English" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="fullNameAr">Full Name *</label>
+                            <input type="text" id="fullNameAr" name="fullNameAr" class="form-control"
+                                placeholder="Enter your full name in Arabic" required dir="ltr" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dateOfBirth">Date of Birth *</label>
+                            <input type="date" id="dateOfBirth" name="dateOfBirth" class="form-control" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nationalId">National ID *</label>
+                            <input type="text" id="nationalId" name="nationalId" class="form-control"
+                                placeholder="Enter your National ID" required />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fullAddress">Full Address</label>
+                        <textarea id="fullAddress" name="fullAddress" class="form-control"
+                            placeholder="Governorate - City - Street" required></textarea>
+                    </div>
+                </div>
+
+                <!-- academic information -->
+                <div class="form-section">
+                    <h2 class="section-title">Academic Information</h2>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="studentCode">Student Code *</label>
+                            <input type="text" id="studentCode" name="studentCode" class="form-control"
+                                placeholder="Enter your student code" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="faculty">Faculty or Campus *</label>
+                            <input type="text" id="faculty" name="faculty" class="form-control"
+                                placeholder="Enter your faculty or campus" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="currentAcademicYear">Current Academic Year (2025-2026) *</label>
+                            <input type="date" id="currentAcademicYear" name="currentAcademicYear" class="form-control"
+                                required />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="department">Department *</label>
+                            <input type="text" id="department" name="department" class="form-control"
+                                placeholder="Enter your department" required />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="specialization">Specialization *</label>
+                        <input type="text" id="specialization" name="specialization" class="form-control"
+                            placeholder="Enter your specialization" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="GPA">GPA (Optional)</label>
+                        <input type="text" id="GPA" name="GPA" class="form-control" placeholder="Enter your GPA" />
+                    </div>
+                </div>
+
+                <!-- Contact information -->
+                <div class="form-section">
+                    <h2 class="section-title">Contact Information</h2>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" class="form-control"
+                                placeholder="Enter your email" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">WhatsApp Number *</label>
+                            <input type="text" id="phone" name="phone" class="form-control"
+                                placeholder="Enter your WhatsApp number" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="linkedin">LinkedIn (Optional)</label>
+                            <input type="url" id="linkedin" name="linkedin" class="form-control"
+                                placeholder="LinkedIn profile URL" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="github">GitHub (Optional)</label>
+                            <input type="text" id="github" name="github" class="form-control"
+                                placeholder="GitHub profile URL" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="codeforces">Codeforces Account (Optional)</label>
+                        <input type="text" id="codeforces" name="codeforces" class="form-control"
+                            placeholder="Enter your Codeforces account" />
+                    </div>
+                </div>
+
+                              <!-- Preferences & Interests -->
+              <div class="form-section">
+                <h2 class="section-title">Preferences & Interests</h2>
+                
+                <div class="form-group">
+                  <label>Do you play Esports?</label>
+                  <div class="radio-group">
+                      <label><input type="radio" name="esports" value="Yes" required> Yes</label>
+                      <label><input type="radio" name="esports" value="No"> No</label>
+                      <label><input type="radio" name="esports" value="Maybe"> Maybe</label>
+                  </div>
+              </div>
+              
+              <div class="form-group">
+                  <label>Choir Participation</label>
+                  <div class="radio-group">
+                      <label><input type="radio" name="fanEvent" value="Yes" required> Yes</label>
+                      <label><input type="radio" name="fanEvent" value="No"> No</label>
+                      <label><input type="radio" name="fanEvent" value="Maybe"> Maybe</label>
+                  </div>
+              </div>
+
+              <div class="form-group">
+                <label>Interest Area (Select all that apply)</label>
+                <div  >
+                    <label><input type="radio" name="fanEvent" value="Yes" required> Study Hub (Academic learning or skill-based content like Problem Solving)</label>
+                    <label><input type="radio" name="fanEvent" value="No"> Gaming Hub (Joining tournaments, e-sports activities, or casual game events)</label>
+                    <label><input type="radio" name="fanEvent" value="Maybe"> Social Hub (Attending events, registering for trips, and offline gatherings)</label>
+                </div>
+            </div>
+              <div class="form-group">
+                    <label for="suggestions">Suggestions or Comments (Optional)</label>
+                    <textarea id="suggestions" name="suggestions" class="form-control"
+                        placeholder="Share your thoughts, suggestions, or any additional information"></textarea>
+                </div>
+              </div>
+
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+
+    <script>
+
+        document
+            .getElementById("membershipForm")
+            .addEventListener("submit", function (e) {
+                e.preventDefault();
+
+
+                const form = e.target;
+                const requiredFields = form.querySelectorAll("[required]");
+                let isValid = true;
+
+                requiredFields.forEach((field) => {
+                    if (!field.value.trim()) {
+                        field.style.borderColor = "#ff6b6b";
+                        isValid = false;
+                    } else {
+                        field.style.borderColor = "rgba(127, 214, 231, 0.3)";
+                    }
+                });
+
+                if (isValid) {
+
+                    console.log("Form submitted successfully");
+
+                } else {
+
+                    alert("Please fill in all required fields");
+                }
+            });
+
+
+        const inputs = document.querySelectorAll(".form-control");
+        inputs.forEach((input) => {
+            input.addEventListener("input", function () {
+                if (this.value.trim()) {
+                    this.style.borderColor = "rgba(127, 214, 231, 0.3)";
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

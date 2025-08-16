@@ -13,22 +13,22 @@ const ContactInfo = () => {
 
       <h3 className="follow-title">Follow Us</h3>
       <div className="contact-socials">
-        <a href="#" className="social-btn">
+        <a href="https://www.facebook.com/profile.php?id=61577174862857" className="social-btn" target="blank">
           <i className="fa-brands fa-facebook-f"></i> Facebook
         </a>
-        <a href="#" className="social-btn">
+        <a href="https://www.linkedin.com/company/student-activity-study-hub/?viewAsMember=true" className="social-btn" target="blank">
           <i className="fa-brands fa-linkedin-in"></i> LinkedIn
         </a>
-        <a href="#" className="social-btn">
+        <a href="https://discord.gg/kdQA6HKFtD" className="social-btn" target="blank">
           <i className="fa-brands fa-discord"></i> Discord
         </a>
-        <a href="#" className="social-btn">
+        <a href="https://codeforces.com/group/nc1IiL4JTF/contests" className="social-btn" target="blank">
           <i className="fa-solid fa-code"></i> Codeforces
         </a>
-        <a href="#" className="social-btn">
+        <a href="https://study-hub-org.blogspot.com/" className="social-btn" target="blank">
           <i className="fa-brands fa-blogger-b"></i> Blogger
         </a>
-        <a href="#" className="social-btn">
+        <a href="https://www.youtube.com/@StudentHubTeam" className="social-btn" target="blank">
           <i className="fa-brands fa-youtube"></i> YouTube
         </a>
       </div>

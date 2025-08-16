@@ -1,32 +1,32 @@
-import event1 from '../../imgs/event1.jpg';
-import event2 from '../../imgs/event2.jpg';
-import event3 from '../../imgs/event3.jpg';
+import event1 from '../../imgs/ore.png';
+import event2 from '../../imgs/league.png';
+import event3 from '../../imgs/skate.png';
 
 const eventsData = [
   {
     image: event1,
-    tag: 'Past',
-    title: 'Welcome Day 2025',
+    tag: 'Upcoming',
+    title: 'Orientation Day 2025',
     desc: 'Welcome new students and introduce them to Study Hub community',
-    date: 'February 15, 2025',
-    location: 'Creative',
+    date: 'October 2025',
+    location: 'Student Activities Hall - SVNU',
   },
   {
     image: event2,
     tag: 'Upcoming',
     tagColor: '#2AA53C',
-    title: 'Game Night',
-    desc: 'Get ready for a night full of fun and games, Game Night is here to bring students together!',
-    date: 'August 25, 2025',
-    location: 'Student Center',
+    title: 'League of Legends',
+    desc: 'Join the tournament win epic prizes earn your glory It’s more than a game .',
+    date: 'October 2025',
+    location: 'Creativa Qena',
   },
   {
     image: event3,
-    tag: 'Past',
-    title: 'Handball Competition',
-    desc: 'Join our Handball Competition and let the game begin!',
-    date: 'May 10, 2025',
-    location: 'University Stadium',
+    tag: 'Upcoming',
+    title: 'Skate Space',
+    desc: 'Skate trip to attend events at the palace, including hanging out on the corniche at luxor',
+    date: 'November 2025',
+    location: 'Egypt Public Library - Luxor',
   },
 ];
 

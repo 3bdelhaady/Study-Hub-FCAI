@@ -1,13 +1,18 @@
 // src/components/HeroSection.js
 import React from 'react';
 import heroImage from '../../imgs/hero-section.png'; 
+import Navbar from '../Header/Navbar';
+import WorkSpaces from '../Work_space/WorkSpaces';
+import { Element } from 'react-scroll';
+import { Link } from 'react-router-dom';
 
 export default function HeroSection() {
   return (
-    <section className="hero">
+    <section className="hero" id="#home">
       <div className="blur-circle"></div>
 
       <div className="container hero-content">
+      <Navbar/> 
         <div className="hero-text">
           <h1>Welcome to study Hub</h1>
           <p>
@@ -31,16 +36,23 @@ export default function HeroSection() {
               <span>Growth</span>
             </div>
           </div>
-
+          <div style={{display:'flex'}}>
+          <div className="btn-hero" style={{marginRight:'10px'}}>
+            <Link to={"/register"}>Join Student Hub</Link>
+          </div>
           <div className="btn-hero">
             <button>Choose Your Year</button>
           </div>
+        </div>
         </div>
 
         <div className="hero-image">
           <img src={heroImage} alt="Hero" />
         </div>
       </div>
+      <Element name="workspaces">
+                <WorkSpaces />
+        </Element>
     </section>
   );
 }
