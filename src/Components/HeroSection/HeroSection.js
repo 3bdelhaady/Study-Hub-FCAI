@@ -12,7 +12,7 @@ export default function HeroSection() {
       <div className="blur-circle"></div>
 
       <div className="container hero-content">
-      <Navbar/> 
+      {/* <Navbar/>  */}
         <div className="hero-text">
           <h1>Welcome to study Hub</h1>
           <p>
@@ -44,9 +44,9 @@ export default function HeroSection() {
             <button>Choose Your Year</button>
           </div>
         </div>
-        </div>
+        </div> 
 
-        <div className="hero-image">
+         <div className="hero-image">
           <img src={heroImage} alt="Hero" />
         </div>
       </div>

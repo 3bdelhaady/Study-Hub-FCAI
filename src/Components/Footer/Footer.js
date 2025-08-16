@@ -26,7 +26,7 @@ const Footer = () => {
         <div className="footer-col footer-col-logo">
           <div className="footer-logo">
             {/* <img src={logo} alt="Study Hub Logo" className="footer-logo-img" /> */}
-            <h2 style={{fontWeight: "bold"}}>Student Hup</h2>
+            <h2 style={{fontWeight: "bold"}}>Student Hub</h2>
           </div>
           <p className="footer-desc">
             A student-powered learning community where knowledge meets collaboration.
@@ -44,7 +44,7 @@ const Footer = () => {
 
       <div className="footer-bottom container">
         <span>
-          <i className="fa-regular fa-copyright"></i> 2025 Study Hub. All Rights Reserved
+          <i className="fa-regular fa-copyright"></i> 2025 Student Hub. All Rights Reserved
         </span>
       </div>
     </footer>

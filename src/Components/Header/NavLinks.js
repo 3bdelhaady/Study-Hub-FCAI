@@ -16,20 +16,8 @@ const links = [
 
 export default function NavLinks() {
   return (
-
-    // <nav className="nav-links">
-    //   {links.map((link, index) => (
-    //     <a
-    //       key={index}
-    //       href={link.href}
-    //       className={link.isActive ? 'active' : ''}
-    //     >
-    //       {link.name}
-    //     </a>
-    //   ))}
-    // </nav>
     <nav className="navbar navbar-expand-lg navbar-transparent">
-      <div className="container-fluid" style={{marginTop:'-50px'}}>
+      <div className="container-fluid">
         {/* Logo Image */}
         <a className="navbar-brand" href="#">
           <img

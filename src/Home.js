@@ -17,6 +17,7 @@ import HonorList from './Components/Honor_List/HonorList';
 import 'swiper/css';
 // import Footer from './Components/Footer/Footer';
 import FooterHome from './Components/Footer/Footer_Home';
+import Navbar from './Components/Header/Navbar';
 function Home() {
   useEffect(() => {
     scrollNavigation(); // <-- تشغيل السكربت بعد التحميل
@@ -25,11 +26,11 @@ function Home() {
   return (
     <>
               {/* Home Section */}
+              <Navbar/>
               <Element name="home">
                 <HeroSection />
               </Element>
 
-              {/* Work Spaces */}
 
 
               {/* Our Mission */}
@@ -41,6 +42,7 @@ function Home() {
               <Element name="about">
                 <AboutUs />
               </Element>
+
 
               {/* Services */}
               <Element name="services">

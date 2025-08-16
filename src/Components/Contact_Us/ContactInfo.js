@@ -3,11 +3,18 @@ const ContactInfo = () => {
     <div className="contact-info-card">
       <h3>Get In Touch</h3>
       <div className="contact-info-list">
+      <div className="contact-info-item">
+              <i className="fa-solid fa-phone"></i>
+              <a href="tel:+01023456789" className="contact-text">
+                +01023456789
+              </a>
+      </div>
+
         <div className="contact-info-item">
-          <i className="fa-solid fa-phone"></i> +01023456789
-        </div>
-        <div className="contact-info-item">
-          <i className="fa-solid fa-envelope"></i> Studyhub@gmail.com
+              <i className="fa-solid fa-envelope"></i>
+              <a href="mailto:contact@studenthub.org" className="contact-text">
+                contact@studenthub.org
+              </a>
         </div>
       </div>
 
