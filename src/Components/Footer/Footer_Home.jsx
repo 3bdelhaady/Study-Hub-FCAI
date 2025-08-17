@@ -43,7 +43,7 @@ const FooterHome = () => {
 
       <div className="footer-bottom container">
         <span>
-          <i className="fa-regular fa-copyright"></i> 2025 Student Hub. All Rights Reserved
+          <i className="fa-regular fa-copyright"></i> 2025 Student Hub All Rights Reserved
         </span>
       </div>
     </footer>

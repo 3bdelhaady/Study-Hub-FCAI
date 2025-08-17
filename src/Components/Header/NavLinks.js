@@ -16,53 +16,52 @@ const links = [
 
 export default function NavLinks() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-transparent">
-      <div className="container-fluid">
-        {/* Logo Image */}
-        <a className="navbar-brand" href="#">
-          <img
-            src={Logo}
-            alt="Logo"
-            width="150"
-            height="auto"
-            className="d-inline-block align-top "
-          />
-        </a>
+<nav className="navbar navbar-expand-lg navbar-transparent">
+  <div className="container-fluid d-flex align-items-center">
+    {/* Logo */}
+    <a className="navbar-brand" href="#">
+      <img
+        src={Logo}
+        alt="Logo"
+        width="150"
+        className="d-inline-block align-top"
+      />
+    </a>
 
-        {/* Mobile button */}
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          style={{background:'#75ADBA'}}
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+    {/* Mobile button */}
+    <button
+      className="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      style={{ background: "#75ADBA" }}
+    >
+      <span className="navbar-toggler-icon"></span>
+    </button>
 
-        {/* Nav links */}
-        <div className="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-          <ul className="navbar-nav custom-nav">
-          {links.map((link, index) => (
+    {/* Nav links */}
+    <div className="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul className="navbar-nav justify-content-end  custom-nav d-flex align-items-center" style={{marginLeft:'280px'}}>
+        {links.map((link, index) => (
           <li className="nav-item" key={index}>
             <Link
               className="nav-link text-white"
               to={link.href}
               smooth={true}
-              duration={1500} // 👈 السرعة هنا 1.5 ثانية
+              duration={1500}
               spy={true}
-              offset={-80} // لو عندك navbar ثابت
+              offset={-80}
             >
               {link.name}
             </Link>
           </li>
         ))}
-          </ul>
-        </div>
-      </div>
-    </nav>
+      </ul>
+    </div>
+  </div>
+</nav>
   );
 }

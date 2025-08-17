@@ -5,8 +5,8 @@ const ContactInfo = () => {
       <div className="contact-info-list">
       <div className="contact-info-item">
               <i className="fa-solid fa-phone"></i>
-              <a href="tel:+01023456789" className="contact-text">
-                +01023456789
+              <a href="tel:+01066325447" className="contact-text">
+              +201066325447
               </a>
       </div>
 

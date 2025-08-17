@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { data } from "react-router-dom";
 
 export default function useFormHandler(initialState = {}) {
   const [formData, setFormData] = useState(initialState);
@@ -13,7 +12,10 @@ export default function useFormHandler(initialState = {}) {
       if (checked) {
         setFormData({ ...formData, [name]: [...prevValues, value] });
       } else {
-        setFormData({ ...formData, [name]: prevValues.filter((v) => v !== value) });
+        setFormData({
+          ...formData,
+          [name]: prevValues.filter((v) => v !== value),
+        });
       }
     } else {
       setFormData({ ...formData, [name]: value });
@@ -22,9 +24,9 @@ export default function useFormHandler(initialState = {}) {
     setErrors({ ...errors, [name]: "" });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-  
+
     // تحقق من الحقول المطلوبة
     let newErrors = {};
     document.querySelectorAll("[required]").forEach((field) => {
@@ -33,38 +35,37 @@ export default function useFormHandler(initialState = {}) {
         newErrors[field.name] = "This field is required";
       }
     });
-  
+
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
       return;
     }
-  
-    const url = 'https://script.google.com/macros/s/AKfycbwd0g7dmC31MHDnn8mGHT2EjNJbSBS9lf-6TOg9V490mlFyX9AgMEbiUkfRZwzT1be83w/exec';
-  
-    try {
-      const body = new URLSearchParams();
-      for (let key in formData) {
-        if (Array.isArray(formData[key])) {
-          body.append(key, formData[key].join(",")); // دمج القيم
-        } else {
-          body.append(key, formData[key]);
-        }
+
+    const url =
+      "https://script.google.com/macros/s/AKfycbwd0g7dmC31MHDnn8mGHT2EjNJbSBS9lf-6TOg9V490mlFyX9AgMEbiUkfRZwzT1be83w/exec";
+
+    // تجهيز البيانات
+    const body = new URLSearchParams();
+    for (let key in formData) {
+      if (Array.isArray(formData[key])) {
+        body.append(key, formData[key].join(",")); // دمج القيم
+      } else {
+        body.append(key, formData[key]);
       }
-  
-      const res = await fetch(url, {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: body.toString()
-      });
-  
-      // const text = await res.text();
-      alert("Successful Submit");
-  
-    } catch (error) {
-      console.error("خطأ أثناء الإرسال:", error);
-      alert("حدث خطأ أثناء الإرسال. حاول مرة أخرى.");
     }
+
+    // إرسال البيانات "في الخلفية"
+    fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: body.toString(),
+    }).catch((error) =>
+      console.error("خطأ أثناء الإرسال في الخلفية:", error)
+    );
+
+    // ✅ Redirect فوري
+    window.location.href = "/";
   };
-      
+
   return { formData, errors, handleChange, handleSubmit };
 }
