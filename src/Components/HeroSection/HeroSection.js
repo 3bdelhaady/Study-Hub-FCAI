@@ -14,7 +14,7 @@ export default function HeroSection() {
       <div className="container hero-content">
       {/* <Navbar/>  */}
         <div className="hero-text">
-          <h1>Welcome to study Hub</h1>
+          <h1>Welcome to student Hub</h1>
           <p>
             "Born from student effort - built to <br />support every study
             journey like family."

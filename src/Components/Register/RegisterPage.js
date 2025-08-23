@@ -29,26 +29,26 @@ export default function RegisterPage() {
                 <FormGroup type="text" label="Date of Birth (YYYY-MM-DD)*" name="Date" placeholder="Enter your Date" required onChange={handleChange} error={errors.Date} />
                 <FormGroup label="National ID *" name="nationalId" placeholder="Enter your National ID" required onChange={handleChange} error={errors.nationalId} />
               </div>
-              <FormGroup as="textarea" label="Full Address" name="address" placeholder="Governorate - City - Street" required onChange={handleChange} error={errors.fullAddress} />
+              <FormGroup as="textarea" label="Full Address*" name="address" placeholder="Governorate - City - Street" required onChange={handleChange} error={errors.fullAddress} />
             </FormSection>
 
             {/* Academic Information */}
             <FormSection title="Academic Information">
               <div className="form-grid">
                 <FormGroup label="Student Code *" name="studentCode" placeholder="Enter your student code" required onChange={handleChange} error={errors.studentCode} />
-                <RadioGroup label="Which faculty or campus are you affiliated with?" name="faculty" options={["Faculty of Computer Science – SVNU (South Valley National University)","Faculty of Computer Science – SVU (South Valley University)","Other"]} onChange={handleChange} required error={errors.faculty}  className="interest-area-group" />
+                <RadioGroup label="Which faculty or campus are you affiliated with?" name="faculty" options={["Faculty of Computer Science – SVNU (South Valley National University)","Faculty of Computer Science – SVU (South Valley University)","Other"]} onChange={handleChange} error={errors.faculty}  className="interest-area-group" />
                 <RadioGroup label="Current Academic Year (2025–2026) *" name="academicYear" options={["First Year – Freshman","Second Year – Sophomore","Third Year – Junior","Fourth Year – Senior"]} onChange={handleChange} required error={errors.academicYear} className="interest-area-group" />
                 <RadioGroup label="Department *" name="department" options={["General (Freshman or Sophomore)","AI","CS","IT"]} onChange={handleChange} required error={errors.department} className="interest-area-group"/>
               </div>
-              <FormGroup as="select" label="Specialization (if available)" name="specialization" options={["Frontend Development","Backend Development", "Cybersecurity","Quality Assurance (Q/A)", "Data Science", "Artificial Intelligence (AI)", "Machine Learning (ML)", "Mobile App Development", "UI/UX Design", "Cloud Computing", "Game Development", "Embedded Systems", "DevOps", "Computer Vision", "Other"]} onChange={handleChange}error={errors.specialization} required/>
+              <FormGroup as="select" label="Specialization (if available)*" name="specialization" options={["Frontend Development","Backend Development", "Cybersecurity","Quality Assurance (Q/A)", "Data Science", "Artificial Intelligence (AI)", "Machine Learning (ML)", "Mobile App Development", "UI/UX Design", "Cloud Computing", "Game Development", "Embedded Systems", "DevOps", "Computer Vision", "Other"]} onChange={handleChange}error={errors.specialization} required/>
               <FormGroup label="GPA (Optional)" name="gpa" placeholder="Enter your GPA" onChange={handleChange} />
             </FormSection>
 
             {/* Contact Information */}
             <FormSection title="Contact Information">
               <div className="form-grid">
-                <FormGroup type="email" label="Email *" name="email" placeholder="Enter your email" required onChange={handleChange} error={errors.email} />
-                <FormGroup label="WhatsApp Number *" name="phone" placeholder="Enter your WhatsApp number" required onChange={handleChange} error={errors.phone} />
+                <FormGroup type="email" label="Email *" name="email" placeholder="Enter your email*" required onChange={handleChange} error={errors.email} />
+                <FormGroup label="WhatsApp Number *" name="phone" placeholder="Enter your WhatsApp number*" required onChange={handleChange} error={errors.phone} />
                 <FormGroup type="url" label="LinkedIn (Optional)" name="linkedin" placeholder="LinkedIn profile URL" onChange={handleChange} />
                 <FormGroup label="GitHub (Optional)" name="github" placeholder="GitHub profile URL" onChange={handleChange} />
               </div>
@@ -68,7 +68,6 @@ export default function RegisterPage() {
                   "Social Hub (Attending events, registering for trips, and offline gatherings)"
                 ]}
                 onChange={handleChange}
-                required
                 error={errors.interestArea}
                 className="interest-area-group"
                 type="checkbox"

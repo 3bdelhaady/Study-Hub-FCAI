@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function RadioGroup({ label, name, options, required, onChange, error, className }) {
+export default function RadioGroup({ label, name, options, required=false, onChange, error, className }) {
   return (
     <div className={`form-group ${className || ""}`}>
       <label>{label}</label>

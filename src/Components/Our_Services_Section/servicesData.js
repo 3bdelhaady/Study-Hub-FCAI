@@ -37,7 +37,7 @@ const servicesData = [
     {
       icon: 'fa-solid fa-question',
       title: 'Coming Soon',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.',
+      desc: 'We’re launching a brand-new service designed to make your experience better. Stay tuned — something amazing is coming soon!',
     },
   ];
   
